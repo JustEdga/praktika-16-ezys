@@ -19,6 +19,7 @@ body {
     align-items: center;
     height: 72px;
     padding: 0 80px;
+    box-shadow: 0 2px 8px rgb(51 51 51 / 18%);
 }
 .logo {
     float: left;
@@ -27,17 +28,91 @@ body {
 }
 .top-nav {
     display: flex;
+    width: 100%;
     justify-content: flex-end;
     font-size: 16px;
     font-weight: 500;
     padding-left: 40px;
 }
 .top-nav > a {
+    position: relative;
     text-decoration: none;
     color: #333;
     padding: 0 24px;
 }
-
+.top-nav > a:hover {
+    color: #EB0045;
+    text-decoration: underline;
+}
+.top-nav > a:last-child {
+    padding-left: 15px;
+}
 .profile {
     width: 26px;
+    margin-left: 44px;
+}
+.top-nav > a:nth-child(5)::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 24px;
+    background-color: #ccc;
+    position: absolute;
+    right: -10px;
+    transform: translateX(50%);
+}
+
+.slides-section {
+    position: relative;
+}
+
+.mySlides {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+}
+
+.btn-left {
+    position: absolute;
+    right: 140px;
+    bottom: -50px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.btn-right {
+    position: absolute;
+    right: 105px;
+    bottom: -50px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.btn-active {
+    color: #EB0045;
+}
+
+
+.dot {
+    display: inline-block;
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #EB0045;
+    border-radius: 50%;
+    transition-duration: 0.4s;
+}
+.dot-container {
+    position: absolute;
+    left: 50%;
+    bottom: -46px;
+    transform: translateX(-50%);
+
+}
+
+.active {
+    background-color: #EB0045!important;
 }

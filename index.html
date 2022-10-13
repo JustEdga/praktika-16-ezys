@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="container header">
-        <img class="logo" src="./img/logo.webp" alt="ezys logo">
+        <a href="#"><img class="logo" src="./img/logo.webp" alt="ezys logo"></a>
         <nav class="top-nav">
             <a href="#">Papildyk sąskaitą</a>
             <a href="#">Planai</a>
@@ -20,5 +20,64 @@
             <a href="#">Mano Ežys</a>
         </nav>
     </header>
+    <section class="slides-section">
+
+        <img class="mySlides" src="./img/EZYS-Roamingas-Narsyk_2000x560.webp" alt="">
+        <img class="mySlides" src="./img/V1-2000x560.webp" alt="">
+
+        <div class="btn-container text-white">
+            <div class="btn btn-left btn-active" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="btn btn-right btn-active" onclick="plusDivs(1)">&#10095;</div>
+
+            <div class="dot-container">
+                <span class="dot active dot-left" onclick="currentDiv(1)"></span>
+                <span class="dot active dot-right" onclick="currentDiv(2)"></span>
+            </div>
+        </div>
+    </section>
 </body>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+    showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+    showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    
+
+    var btns = document.getElementsByClassName("btn");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+    }
+    for (i = 0; i < btns.length; i++) {
+    btns[i].className = btns[i].className.replace(" btn-active", "");
+    }
+    x[slideIndex-1].style.display = "block";  
+    btns[slideIndex-1].className += " btn-active";
+    }
+    
+</script>
+
 </html>
