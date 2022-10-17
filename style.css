@@ -12,13 +12,13 @@ body {
 .container {
     display: inline-block;
     width: 100%;
+    padding: 0 80px;
 }
 
 .header {
     display: flex;
     align-items: center;
     height: 72px;
-    padding: 0 80px;
     box-shadow: 0 2px 8px rgb(51 51 51 / 18%);
 }
 .logo {
@@ -70,6 +70,97 @@ body {
     width: 100%;
     height: 560px;
     object-fit: cover;
+    position: relative;
+}
+
+.mySlides > img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+}
+
+
+
+.title-left-slide {
+    width: 35%;
+    border: 4px solid #333;
+    text-transform: uppercase;
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    
+}
+
+.title-left-slide > h1 {
+    color: #333;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 48px;
+}
+
+.paragraph-left-slide {
+    width: 28%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 290px;
+    left: 80px;
+    border: 4px solid #333;
+    padding: 12px;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+
+}
+.slide-btn {
+    position: absolute;
+    top: 425px;
+    left: 80px;
+    text-decoration: none;
+    background-color: #EB0045;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.3;
+    padding: 10px 24px;
+    border-radius: 5px;
+}
+.second-slide-btn {
+    top: 405px;
+}
+
+
+.title-right-slide {
+    position: absolute;
+    top: 120px;
+    left: 80px;
+    width: 32%;
+    border: 4px solid #333;
+    padding: 12px;
+    color: #333;
+    text-transform: uppercase;
+}
+.title-right-slide > h2 {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 48px;
+}
+
+.paragraph-right-slide {
+    position: absolute;
+    top: 215px;
+    left: 80px;
+    width: 28%;
+    border: 4px solid #333;
+    padding: 12px;
+    color: #333;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
 }
 
 .btn-left {
@@ -115,4 +206,76 @@ body {
 
 .active {
     background-color: #EB0045!important;
+}
+
+/* SUPERPLANAI */
+
+.main {
+    background-color: #F6F6F6;
+}
+
+.superplanai {
+    margin-top: 100px;
+}
+.superplanai > h3 {
+    font-size: 32px;
+    font-weight: 900;
+    color: #333;
+}
+
+.first-column {
+    width: 25%;
+    padding: 35px 15px 35px 0;
+}
+
+.superplanai > .first-column > a {
+    text-decoration: none;
+    position: relative;
+}
+
+.superplanai-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 24px rgb(51 51 51 / 16%);
+    padding: 15px;
+}
+
+.max {
+    font-size: 14px;
+    color: #999;
+    padding-bottom: 15px;
+}
+.gb {
+    display: flex;
+    gap: 8px;
+    font-size: 32px;
+    font-weight: 900;
+    color: #333;
+}
+.gb > span {
+    font-size: 52px;
+    line-height: 0.75;
+}
+
+.superplanai-column > p {
+    font-size: 14px;
+    color: #333;
+    padding: 5px 0;
+}
+.superplanai-column >p:last-child {
+    font-size: 16px;
+    padding: 30px 0 0 0;
+}
+.superplanai-column >p:last-child >b {
+    font-size: 20px;
+}
+
+.first-column > a > hr {
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    color: #F6F6F6;
 }

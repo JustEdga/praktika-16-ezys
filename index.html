@@ -22,8 +22,35 @@
     </header>
     <section class="slides-section">
 
-        <img class="mySlides" src="./img/EZYS-Roamingas-Narsyk_2000x560.webp" alt="">
-        <img class="mySlides" src="./img/V1-2000x560.webp" alt="">
+        <div class="mySlides">
+
+         <img src="./img/EZYS-Roamingas-Narsyk_2000x560.webp" alt="">
+
+         <div class="title-left-slide">
+            <h1>europoje naršyk kaip namie</h1>
+         </div>
+         <div class="paragraph-left-slide">
+            <p>Keliauk ir nesirūpink - tavo GB, MIN ir SMS visoje ES galios kaip namie!</p>
+         </div>
+         <a class="slide-btn" href="#">Užsisakyk planą</a>
+
+        </div>
+
+        <div class="mySlides">
+
+             <img src="./img/V1-2000x560.webp" alt="">
+
+         <div class="title-right-slide">
+            <h2>СЛАВА УКРАЇНІ</h2>
+         </div>
+         <div class="paragraph-right-slide">
+            <p>Дорогі українці, усю інформацію про те як користуватися нашими послугами та залишатися на звʼязку знайдете тут</p>
+         </div>
+         <a class="slide-btn second-slide-btn" href="#">Детальна інформація</a>
+
+        </div>
+
+       
 
         <div class="btn-container text-white">
             <div class="btn btn-left btn-active" onclick="plusDivs(-1)">&#10094;</div>
@@ -35,6 +62,32 @@
             </div>
         </div>
     </section>
+
+    <main class="container main">
+
+        <section class="superplanai">
+                <h3>SUPERPLANAI</h3>
+                <div class="first-column">
+                    <a href="#">
+                        <div class="superplanai-column">
+                            <span class="max">MAX</span>
+                            <span class="gb"><span>&infin;</span> GB</span>
+                            <p>13,2 GB ES</p>
+                            <p>&infin;MIN + &infin; SMS</p>
+                            
+                            <p><b>15,90</b>Eur</p> 
+                         </div>
+                         <hr>
+                     </a>
+                </div>
+                
+            </section>
+        
+
+    </main>
+
+    
+
 </body>
 
 <script>
@@ -63,19 +116,6 @@
     }
     x[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    
-
-    var btns = document.getElementsByClassName("btn");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length}
-    for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-    }
-    for (i = 0; i < btns.length; i++) {
-    btns[i].className = btns[i].className.replace(" btn-active", "");
-    }
-    x[slideIndex-1].style.display = "block";  
-    btns[slideIndex-1].className += " btn-active";
     }
     
 </script>
