@@ -217,12 +217,15 @@ body {
 
 .superplanai {
     display: flex;
+    justify-content: center;
+    gap: 25px;
     margin-top: 150px;
     position: relative;
 }
 .superplanai > h3 {
     position: absolute;
-    top: -50px;
+    top: -75px;
+    left: 0;
     font-size: 32px;
     font-weight: 900;
     color: #333;
@@ -230,8 +233,7 @@ body {
 
 .first-column, .second-column, .third-column, .forth-column {
     width: 25%;
-    padding: 35px 15px 35px 0;
-    margin-left: 10px;
+    
 }
 .first-column {
     margin-left: 0;
@@ -296,7 +298,7 @@ body {
 
 .superplanai-btn {
     position: absolute;
-    top: 325px;
+    top: 280px;
     left: 50%;
     transform: translateX(-50%);
     text-decoration: none;
